@@ -2,15 +2,14 @@
     <html>
            <head>
              <style>
-               *{
-                 margin:10px;
-               }
                h1{
                  font-size:25px;
                  margin-bottom:10px;
+                 margin-left:0px;
                }
                h1:hover{
-                color:#ef476f;
+                 color:#ef476f;
+                 margin-right:750px;
                }
                #demo{
                  width:300px;
@@ -20,31 +19,45 @@
                  text-align:center;
                  margin-bottom:10px;
                  border-radius:25px;
+                 margin-left:50px;
+                 
+               
                }
-                 #demo:hover{
+               #demo:hover{
                  color:#ef476f;
                }
-               #nut1{
+               .nut{
+                 border-radius:25px;
                  background:#219ebc;
                  border: 2px solid #ef476f;
                  height:50px;
-                 border-radius:25px;
+                 width:100px;
+                 margin-left:25px;
+                 
                }
-               #nut1:hover{
+               .nut:hover{
                  background:#ef476f;
                  border: 2px solid #219ebc;
                  color:#edf6f9;
                }
              </style>
             <script>
-              function myFunction() {
-                document.getElementById("demo").innerHTML = "Nội dung thay đổi.";
+              function nut1() {
+                document.getElementById("demo").innerHTML = "  HTML Cơ Bản";
+              }
+              function nut2() {
+                document.getElementById("demo").innerHTML = "CSS Cơ Bản";
+              }
+              function nut3() {
+                document.getElementById("demo").innerHTML = "JavaScript Cơ Bản";
               }
             </script>              
            </head>
            <body>
             <h1>Đoạn mã JavaScript được đặt trong head</h1>
-            <div id="demo">Nội dung web.</div>
-            <button id=nut1 type="button" onclick="myFunction()">Thử nhấn chuột</button>            
+            <div id="demo">Nội Dung Web.</div>
+            <button id=nut1 class=nut type="button" onclick="nut1()">nội dung 1</button>
+             <button id=nut2 class=nut type="button" onclick="nut2()">nội dung 2</button> 
+             <button id=nut3 class=nut type="button" onclick="nut3()">nội dung 3</button> 
            </body>
     </html>
