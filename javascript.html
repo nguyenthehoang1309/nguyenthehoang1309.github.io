@@ -5,13 +5,25 @@
                *{
                  margin:0px;
                }
+               h1:hover{
+                 background:black;
+                 color:white;
+                 margin-right:1000px;
+               }
                #demo{
                  wight:300px;
                  height:250px;
                  background:#8ecae6;
+                 font-size:30px;
+                 text-align:center;
                }
-               button{
+               #nut1{
                  background:#219ebc;
+                 border: 2px solid #ef476f;
+               }
+               #nut1:hover{
+                 background:#ef476f;
+                 border: 2px solid #219ebc;
                }
              </style>
             <script>
@@ -23,6 +35,6 @@
            <body>
             <h1>Đoạn mã JavaScript được đặt trong head</h1>
             <div id="demo">Nội dung web.</div>
-            <button type="button" onclick="myFunction()">Thử nhấn chuột</button>            
+            <button id=nut1 type="button" onclick="myFunction()">Thử nhấn chuột</button>            
            </body>
     </html>
