@@ -2,6 +2,11 @@
     <html>
            <head>
              <style>
+               #starselect{
+                 width:170px;
+                 border-radius:10px;
+                
+               }
                .but button{
                  border-radius:10px;
                  width :100px;
@@ -54,7 +59,20 @@
 <input name="gioitinh" type="radio" value="Nam" />Nam
 <input name="gioitinh" type="radio" value="Nữ" />Nữ
             </form><p/>
-             Quốc Tịch: <input type="text" class="fname" name="fname"><br/><br/>
+             Quốc Tịch:<select name="startype" id="starselect">
+ 
+     <option selected="selected"> </option>
+ 
+     <option value="Viet Nam">Viet Nam</option>
+ 
+     <option value="Australia">Australia</option>
+ 
+     <option value="Campuchia">Campuchia</option>
+ 
+     <option value="Lao">Lao</option>
+ 
+   <select>
+ <br/><br/>
              Sở Thích:</br>
              <input type="checkbox" name="vehicle1" value="Bike">
   <label for="vehicle1">Lập Trình</label><br>
