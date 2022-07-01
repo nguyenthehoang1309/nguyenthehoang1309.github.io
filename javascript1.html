@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+    <html>
+           <head>
+             <style>
+               .but button{
+                 border-radius:10px;
+                 width :100px;
+               }
+              .but{
+                 
+                 padding-bottom:10px;
+               }
+               #pten{
+                 padding-top:10px;
+               }
+               #ten{
+                 width:205px;
+               }
+               #email{
+                 width:192px;
+               }
+               #o2{
+                 float:left;
+                background: #ffccd5;
+                 width:240px;
+                  height:304px;
+                 padding-left:10px;
+                 
+               }
+               #o1{
+                  float:left;
+                 width:250px;
+                 background:#8ecae6;
+                 height:auto;
+               }
+               .fname{
+                 border-radius:10px;
+               }
+               #gt{
+                 float: left;
+               }
+               #nn{
+                 margin:15px;
+               }
+             </style>
+           </head>
+           <body>
+             <div id=o1>
+                <form id="myForm" action=""><p id=pten> Tên: <input type="text" id=ten class="fname" name="fname"><br/></p></form>
+             Email: <input type="text"id=email class="fname" name="fname"><br/>
+             <p id=gt>
+               Giới  Tính:
+             <form id=nn>
+<input name="gioitinh" type="radio" value="Nam" />Nam
+<input name="gioitinh" type="radio" value="Nữ" />Nữ
+            </form><p/>
+             Quốc Tịch: <input type="text" class="fname" name="fname"><br/><br/>
+             Sở Thích:</br>
+             <input type="checkbox" name="vehicle1" value="Bike">
+  <label for="vehicle1">Lập Trình</label><br>
+  <input type="checkbox" name="vehicle2" value="Car">
+  <label for="vehicle2">Du Lịch</label><br>
+  <input type="checkbox" name="vehicle3" value="Boat" checked>
+  <label for="vehicle3">Bơi Lội</label><br>
+      <div class=but>
+        <button onclick="hienthi()">
+        Chấp Nhận
+      </button>
+      <button>
+        Hủy
+      </button>
+             </div>
+             </div>
+      <div id=o2>
+        <p>Tên:</p>
+        <p>Email:</p>
+        <p>Giới Tính:</p>
+        <p>Quốc Tịch:</p>
+        <p>Sở Thích:</p>
+             </div>
+              <script>function hienthi() {
+	// Giới thiệu tên
+	document.getElementById("o2").innerHTML = "Tên:" + document.forms["myForm"].ten.value;}</script>   
+           </body>
+    </html>
