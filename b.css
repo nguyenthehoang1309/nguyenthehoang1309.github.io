@@ -594,7 +594,7 @@ footer span a:hover{
         position: fixed;
         height: 70vh;
         width: 33%;
-        left: -100%;
+        right: -100%;
         top: 0;
         background: #fff;
         text-align: center;
