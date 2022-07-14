@@ -1,71 +1,91 @@
-<!DOCTYPE html>
-    <html>
-           <head>
-             <style>
-               header{
-                 background:#ffccd5;
-                 padding:10px;
-                 width:410px;
-                 
-               }
-               h1{
-                 font-size:25px;
-                 margin-bottom:10px;
-                 margin-left:77px;
-               }
-               h1:hover{
-                 color:#1982c4;
-               }
-               #demo{
-                 width:300px;
-                 height:300px;
-                 background:#8ecae6;
-                 font-size:30px;
-                 text-align:center;
-                 margin-bottom:10px;
-                 border-radius:25px;
-                 margin-left:50px;
-                 margin-bottom:10px;
-                 
-               
-               }
-               #demo:hover{
-                 color:#ef476f;
-               }
-               .nut{
-                 border-radius:25px;
-                 background:#219ebc;
-                 border: 2px solid #ef476f;
-                 height:50px;
-                 width:100px;
-                 margin-left:24px;
-                 
-               }
-               .nut:hover{
-                 background:#ef476f;
-                 border: 2px solid #219ebc;
-                 color:#edf6f9;
-               }
-             </style>
-            <script>
-              function nut1() {
-                document.getElementById("demo").innerHTML = "  HTML Là Gì:<br/>HTML viết tắt của Hypertext Markup Language là ngôn ngữ lập trình dùng để xây dựng và cấu trúc lại các thành phần có trong Website.";
-              }
-              function nut2() {
-                document.getElementById("demo").innerHTML = "CSS Là Gì:<br/>CSS là viết tắt của Cascading Style Sheets, một ngôn ngữ thiết kế đơn giản, xử lý một phần giao diện của trang web.";
-              }
-              function nut3() {
-                document.getElementById("demo").innerHTML = "JavaScript Là Gì:<br/>JavaScript là ngôn ngữ lập trình website phổ biến hiện nay, nó được tích hợp và nhúng vào HTML giúp website trở nên sống động hơn.";
-              }
-            </script>              
-           </head>
-           <body>
-             <header>
-            <h1>Học Lập Trình Cơ Bản</h1>
-            <div id="demo">Nội Dung Web.</div>
-            <button id=nut1 class=nut type="button" onclick="nut1()">nội dung 1</button>
-             <button id=nut2 class=nut type="button" onclick="nut2()">nội dung 2</button> 
-             <button id=nut3 class=nut type="button" onclick="nut3()">nội dung 3</button> 
-             </header>
-           </body>
-    </html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+   
+ 
+            * {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            section {
+                display: flex;
+                justify-content: center;
+            }
+            .container {
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+                width: 40rem;
+                padding: 1em 0;
+                background:#ffccd5;
+                
+            }
+            #demo {
+                display: grid;
+                place-items: center;
+                background: #8ecae6;
+                width: 19rem;
+                height: 15rem;
+                margin-top: 1em;
+                margin-bottom: 1em;
+                font-weight: bold;
+                border-radius: 30px;
+            }
+            button {
+                  border-radius: 25px;
+    background: #219ebc;
+    border: 2px solid #ef476f;
+    height: 50px;
+    width: 100px;
+                width: 6rem;
+                padding: 1em 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <section>
+            <div class="container">
+                <h1>Bấm vào ô bên dưới</h1>
+                <div id="demo"></div>
+                <div class="button">
+                    <button class="print">bấm</button>
+                    <button class="total">bấm</button>
+                    <button class="total-even">bấm</button>
+                </div>
+            </div>
+        </section>
+        
+    </body>
+    <script>
+        document.querySelector('.print').addEventListener('click', print);
+        function print() {
+            document.getElementById('demo').innerText = 'Xin Chao';
+        };
+
+
+        document.querySelector('.total').addEventListener('click', total);
+        function total() {
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                total += i;
+            };
+            document.getElementById('demo').innerText = `Tong tu 1-10: ${total}`;
+        };
+
+
+        document.querySelector('.total-even').addEventListener('click', totalEvenNum);
+        function totalEvenNum() {
+            let total = 0;
+            for (let i = 1; i <= 10; i++) {
+                if (i % 2 === 0) {
+                    total += i;
+                };
+            };
+            document.getElementById('demo').innerText = `Tong tu 1-10: ${total}`;
+        };
+    </script>
+</html>
